@@ -1,1 +1,49 @@
-<router-outlet></router-outlet>
+<div  class=" routarea">
+    <router-outlet></router-outlet>
+</div>
+    
+
+<div class="card sidemenu">
+<span>
+    <div class="collapsible-header z-depth-1 waves-effect mnbar" (click)="moveTo('workspace')">
+        
+        <i class="material-icons">widgets</i>
+       Criteria
+    </div>
+    <div class="collapsible-header z-depth-1 waves-effect mnbar" (click)="moveTo('addoredit')">
+        <i class="material-icons">quiz</i>
+       Questions
+    </div>
+    <div class="collapsible-header z-depth-1 waves-effect mnbar" (click)="moveTo('qualifiers')">
+        <i class="material-icons">security</i>
+       Qualifiers
+    </div>
+    <div class="collapsible-header z-depth-1 waves-effect mnbar"  (click)="moveTo('smartpick')">
+        <i class="material-icons">tune</i>
+      Compose
+    </div>
+    <div class="collapsible-header z-depth-1 waves-effect mnbar">
+        <i class="material-icons">account_circle</i>
+        My Profile
+    </div>
+    <div class="collapsible-header z-depth-1 waves-effect mnbar">
+        <i class="material-icons">notifications</i>
+        Notifications
+    </div>
+</span>
+</div>
+
+<div class="collapsible-header z-depth-2 head">
+    <i class="material-icons">store</i>
+    Blubirch Appario
+    <span  style="position: absolute;right: 0px;" class="hids">
+        <i class="material-icons">account_circle</i>
+    </span>
+</div>
+<div class="collapsible-header z-depth-2 foot">
+    <i class="material-icons ico" (click)="moveTo('workspace')">widgets</i>
+    <i class="material-icons ico" (click)="moveTo('addoredit')">quiz</i>
+    <i class="material-icons ico" (click)="moveTo('qualifiers')">security</i>
+    <i class="material-icons ico"  (click)="moveTo('smartpick')">tune</i>
+    <i class="material-icons ico">notifications</i>
+</div>

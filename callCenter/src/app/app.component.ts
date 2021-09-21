@@ -14,6 +14,9 @@ export class AppComponent implements OnInit {
     M.AutoInit();
     
   }
+  moveTo(str:String){
+    
+  }
 
 
 }
