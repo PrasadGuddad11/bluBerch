@@ -11,6 +11,21 @@
     font-weight:bold;
     //background-color: #9fa8da   ;
 }
+.splasher{
+    width:100%;
+    top:0%;
+}
+.hide{
+    display:none;
+}
+.selectedi{
+    color:#d47a86;
+}
+.selected{
+    color:#f5b2a8;
+    weight:bolder;
+    font-size:large;
+}
 .routarea{
     position: fixed;
     top: 7.8%;
@@ -71,7 +86,7 @@
         
     }
     .ico{
-        width: 15%;
+        width: 12%;
         text-align: right;
     }
     .hids{

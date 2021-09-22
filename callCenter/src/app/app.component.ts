@@ -1,4 +1,5 @@
 import { Component ,OnInit} from '@angular/core';
+import { Router } from '@angular/router'
 declare const M:any;
 @Component({
   selector: 'app-root',
@@ -6,7 +7,11 @@ declare const M:any;
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  constructor(private router:Router) { }
   title = 'Blubirch Appario';
+  navpath():string{
+    return location.href;
+  }
   ngOnInit(){
 
   }
@@ -15,8 +20,14 @@ export class AppComponent implements OnInit {
     
   }
   moveTo(str:String){
-    
+    this.router.navigate([str]);
   }
-
+  isSplash():boolean{
+    var spl:boolean=false;
+    if(location.href.includes("splash")){
+      spl=true;
+    }
+    return spl;
+  }
 
 }

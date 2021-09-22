@@ -1,49 +1,67 @@
-<div  class=" routarea">
+<div  class=" routarea" id="routtag">
     <router-outlet></router-outlet>
 </div>
     
 
-<div class="card sidemenu">
-<span>
-    <div class="collapsible-header z-depth-1 waves-effect mnbar" (click)="moveTo('workspace')">
+<div class="card sidemenu" id="sidetag">
+<span class="collapsible popout">
+    <blockquote class="collapsible-header z-depth-1 waves-effect mnbar " (click)="moveTo('home')"[ngClass]="{'selectedi':navpath().includes('home')==true}">
         
-        <i class="material-icons">widgets</i>
-       Criteria
+        <i class="material-icons">home</i>
+       Home
+    </blockquote>
+    <blockquote class="collapsible-header z-depth-1 waves-effect mnbar" (click)="moveTo('dashboard')"[ngClass]="{'selectedi':navpath().includes('dashboard')==true}">
+        
+        <i class="material-icons">space_dashboard</i>
+       Dashboard
+    </blockquote>
+    <blockquote class="collapsible-header z-depth-1 waves-effect mnbar" (click)="moveTo('newentry')"[ngClass]="{'selectedi':navpath().includes('newentry')==true}">
+        
+        <i class="material-icons">library_add</i>
+       New Entry
+    </blockquote>
+    <blockquote class="collapsible-header z-depth-1 waves-effect mnbar" (click)="moveTo('statusupdate')"[ngClass]="{'selectedi':navpath().includes('statusupdate')==true}">
+        
+        <i class="material-icons">update</i>
+       Status Update
+    </blockquote>
+    <blockquote class="collapsible-header z-depth-1 waves-effect mnbar" (click)="moveTo('reports')"[ngClass]="{'selectedi':navpath().includes('reports')==true}">
+        
+        <i class="material-icons">assessment</i>
+       Reports
+    </blockquote>
+    <blockquote class="collapsible-header z-depth-1 waves-effect mnbar" (click)="moveTo('search')"[ngClass]="{'selectedi':navpath().includes('search')==true}">
+        
+        <i class="material-icons">manage_search</i>
+       Search
+    </blockquote>
+    <div class="collapsible-header z-depth-1 waves-effect mnbar" style="background-color:#e8eaf6 ">
+        
+        <i class="material-icons">copyright</i>
+        <small>
+        Copyrights eStartup.<br> All rights reserved<br>
+        Designed by <a href="http://www.dimension64.com/">Dimension64</a>
+        </small>
     </div>
-    <div class="collapsible-header z-depth-1 waves-effect mnbar" (click)="moveTo('addoredit')">
-        <i class="material-icons">quiz</i>
-       Questions
-    </div>
-    <div class="collapsible-header z-depth-1 waves-effect mnbar" (click)="moveTo('qualifiers')">
-        <i class="material-icons">security</i>
-       Qualifiers
-    </div>
-    <div class="collapsible-header z-depth-1 waves-effect mnbar"  (click)="moveTo('smartpick')">
-        <i class="material-icons">tune</i>
-      Compose
-    </div>
-    <div class="collapsible-header z-depth-1 waves-effect mnbar">
-        <i class="material-icons">account_circle</i>
-        My Profile
-    </div>
-    <div class="collapsible-header z-depth-1 waves-effect mnbar">
-        <i class="material-icons">notifications</i>
-        Notifications
-    </div>
+    
+    
 </span>
 </div>
 
-<div class="collapsible-header z-depth-2 head">
-    <i class="material-icons">store</i>
+<div class="collapsible-header z-depth-2 head valign-wrapper" id="headtag">
+    <i class="material-icons">timelapse</i>
     Blubirch Appario
-    <span  style="position: absolute;right: 0px;" class="hids">
-        <i class="material-icons">account_circle</i>
-    </span>
+    <div  style="position: absolute;right:3%;height:100%;"class="valign-wrapper">
+        <i class="material-icons "(click)="moveTo('notifications')"[ngClass]="{'selected':navpath().includes('notifications')==true}">notifications</i>
+        <i  (click)="moveTo('profile')" class="material-icons"[ngClass]="{'selected':navpath().includes('profile')==true}">account_circle</i>
+    </div>
 </div>
-<div class="collapsible-header z-depth-2 foot">
-    <i class="material-icons ico" (click)="moveTo('workspace')">widgets</i>
-    <i class="material-icons ico" (click)="moveTo('addoredit')">quiz</i>
-    <i class="material-icons ico" (click)="moveTo('qualifiers')">security</i>
-    <i class="material-icons ico"  (click)="moveTo('smartpick')">tune</i>
-    <i class="material-icons ico">notifications</i>
+<div class="collapsible-header z-depth-2 foot" id="foottag">
+    <i class="material-icons ico" (click)="moveTo('home')"[ngClass]="{'selected':navpath().includes('home')==true}">home</i>
+    <i class="material-icons ico" (click)="moveTo('dashboard')"[ngClass]="{'selected':navpath().includes('dashboard')==true}">space_dashboard</i>
+    <i class="material-icons ico" (click)="moveTo('newentry')"[ngClass]="{'selected':navpath().includes('newentry')==true}">library_add</i>
+    <i class="material-icons ico"  (click)="moveTo('statusupdate')"[ngClass]="{'selected':navpath().includes('statusupdate')==true}">update</i>
+    <i class="material-icons ico"  (click)="moveTo('reports')"[ngClass]="{'selected':navpath().includes('reports')==true}">assessment</i>
+    <i class="material-icons ico"  (click)="moveTo('search')"[ngClass]="{'selected':navpath().includes('search')==true}">manage_search</i>
+    
 </div>

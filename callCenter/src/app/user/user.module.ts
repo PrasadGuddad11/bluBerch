@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SplashComponent } from './splash/splash.component';
 import { SigninComponent } from './signin/signin.component';
 import { ProfileComponent } from './profile/profile.component';
+import { NotificationsComponent } from './notifications/notifications.component';
 
 
 
@@ -10,7 +11,8 @@ import { ProfileComponent } from './profile/profile.component';
   declarations: [
     SplashComponent,
     SigninComponent,
-    ProfileComponent
+    ProfileComponent,
+    NotificationsComponent
   ],
   imports: [
     CommonModule

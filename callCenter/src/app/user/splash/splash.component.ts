@@ -11,7 +11,16 @@ export class SplashComponent implements OnInit {
   constructor(private router:Router) { }
 
   ngOnInit(): void {
-    setTimeout(()=>{this.router.navigate(['home']);},3000);    
+    document.getElementById("headtag")?.setAttribute("style","opacity:0;");
+    document.getElementById("foottag")?.setAttribute("style","opacity:0;");
+    document.getElementById("sidetag")?.setAttribute("style","opacity:0;");
+    
+    setTimeout(()=>{
+      document.getElementById("headtag")?.setAttribute("style","opacity:1;");
+      document.getElementById("foottag")?.setAttribute("style","opacity:1;");
+      document.getElementById("sidetag")?.setAttribute("style","opacity:1;");
+      this.router.navigate(['home']);
+    },3000);    
   }
 
 }

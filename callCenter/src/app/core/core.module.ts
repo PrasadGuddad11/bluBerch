@@ -4,6 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReportsComponent } from './reports/reports.component';
 import { NewentryComponent } from './newentry/newentry.component';
+import { StatusupdateComponent } from './statusupdate/statusupdate.component';
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -12,7 +14,9 @@ import { NewentryComponent } from './newentry/newentry.component';
     HomeComponent,
     DashboardComponent,
     ReportsComponent,
-    NewentryComponent
+    NewentryComponent,
+    StatusupdateComponent,
+    SearchComponent
   ],
   imports: [
     CommonModule
